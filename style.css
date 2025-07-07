@@ -1,0 +1,33 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1a202c; /* Dark background similar to the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Custom styles for the card background */
+.auth-card-bg {
+    background: linear-gradient(135deg, #2d3748, #4a5568); /* Subtle gradient for the outer card */
+    padding: 20px;
+}
+
+/* Custom CSS for the semi-circular curve on the left panel (for login) */
+.left-panel-custom-shape {
+    clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+}
+
+/* Custom CSS for the semi-circular curve on the right panel (for register) */
+.right-panel-custom-shape {
+    clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 10% 100%, 0% 50%);
+}
+
+/* Responsive adjustments for shapes on smaller screens */
+@media (max-width: 767px) {
+    .left-panel-custom-shape,
+    .right-panel-custom-shape {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Revert to rectangular */
+    }
+}
